@@ -1,98 +1,83 @@
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WiskundeWereld - Havo & VWO</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
 
-    <header class="navbar">
-        <div class="logo">
-            <i class="fa-solid fa-square-root-variable"></i> Wiskunde<span>Wereld</span>
-        </div>
-        <nav>
-            <a href="#vwo">Vwo Bovenbouw</a>
-            <a href="#havo">Havo Bovenbouw</a>
-            <a href="#onderbouw">Onderbouw</a>
-        </nav>
-    </header>
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-    <main class="container">
-        <section class="hero">
-            <h1>Welkom bij WiskundeWereld</h1>
-            <p>Kies jouw niveau en klas om direct aan de slag te gaan met uitleg, opgaven en voorbereiding op toetsen en examens.</p>
-        </section>
+header {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
 
-        <!-- 1. VWO BOVENBOUW (BOVENAAN) -->
-        <section id="vwo" class="section">
-            <h2><i class="fa-solid fa-award"></i> Vwo Bovenbouw</h2>
-            <div class="grid">
-                <div class="card highlight">
-                    <span class="badge">Actief</span>
-                    <h3>6 Vwo - Wiskunde B</h3>
-                    <p>Examenstof, domeinen, herhaling en examentrainingen.</p>
-                    <a href="vwo6-wiskb.html" class="btn">Open Vwo 6 Wisk B</a>
-                </div>
-                <div class="card">
-                    <h3>4 Vwo</h3>
-                    <p>Wiskunde A, B & C</p>
-                    <a href="#" class="btn disabled">Binnenkort beschikbaar</a>
-                </div>
-                <div class="card">
-                    <h3>5 Vwo</h3>
-                    <p>Wiskunde A, B & C</p>
-                    <a href="#" class="btn disabled">Binnenkort beschikbaar</a>
-                </div>
-            </div>
-        </section>
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
 
-        <!-- 2. HAVO BOVENBOUW -->
-        <section id="havo" class="section">
-            <h2><i class="fa-solid fa-graduation-cap"></i> Havo Bovenbouw</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>4 Havo</h3>
-                    <p>Wiskunde A & Wiskunde B</p>
-                    <a href="#" class="btn disabled">Binnenkort beschikbaar</a>
-                </div>
-                <div class="card">
-                    <h3>5 Havo</h3>
-                    <p>Examenvoorbereiding Havo</p>
-                    <a href="#" class="btn disabled">Binnenkort beschikbaar</a>
-                </div>
-            </div>
-        </section>
+.main-container {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    flex: 1;
+}
 
-        <!-- 3. ONDERBOUW (ONDERAAN) -->
-        <section id="onderbouw" class="section">
-            <h2><i class="fa-solid fa-cubes"></i> Onderbouw</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Klas 1</h3>
-                    <p>Havo / Vwo basiswiskunde</p>
-                    <a href="#" class="btn disabled">Binnenkort beschikbaar</a>
-                </div>
-                <div class="card">
-                    <h3>Klas 2</h3>
-                    <p>Havo / Vwo verdieping</p>
-                    <a href="#" class="btn disabled">Binnenkort beschikbaar</a>
-                </div>
-                <div class="card">
-                    <h3>Klas 3</h3>
-                    <p>Voorbereiding op profielkeuze</p>
-                    <a href="#" class="btn disabled">Binnenkort beschikbaar</a>
-                </div>
-            </div>
-        </section>
-    </main>
+.level-card {
+    background-color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 6px solid #3498db;
+}
 
-    <footer>
-        <p>&copy; 2026 WiskundeWereld — Alle rechten voorbehouden.</p>
-    </footer>
+.level-card h2 {
+    color: #2c3e50;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+.level-card p {
+    color: #666;
+}
+
+.btn {
+    background-color: #3498db;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.btn.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #2c3e50;
+    color: white;
+    margin-top: auto;
+}
